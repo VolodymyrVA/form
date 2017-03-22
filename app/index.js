@@ -1,7 +1,7 @@
-import View from './View'
+import LoginForm from './LoginForm'
 
-import './index.css'
+import './Show.css'
 
-let view = new View();
+let loginForm = new LoginForm();
 
-view.createForm();
+loginForm.init();

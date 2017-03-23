@@ -1,4 +1,4 @@
-.registration {
+.divWrapper {
     display: block;
     z-index: 2;
     height: 100%;
@@ -24,7 +24,7 @@
     padding: 0.3rem;
     text-align: center;
 }
-.form-button {
+.form-button-green {
     position: relative;
     display: inline-block;
     width: 314px;
@@ -34,6 +34,35 @@
     margin: 10px;
     text-align: center;
     color: white;
+}
+
+.form-button-green:focus {
+    outline: none;
+}
+
+.form-button-gray {
+    position: relative;
+    display: inline-block;
+    width: 314px;
+    border: 0.5px solid gray;
+    background: gray;
+    padding: 0.3rem;
+    margin: 10px;
+    text-align: center;
+    color: white;
+}
+
+.form-button-close {
+    display: table;
+    text-decoration: none;
+    border: 1px solid gray;
+    color: gray;
+    float: right;
+    margin: -4%;
+    cursor: pointer;
+    font-size: 28px;
+    border-right: none;
+    border-top: none;
 }
 
 .log-form p {
@@ -47,3 +76,5 @@
 .hidden {
     visibility: hidden;
 }
+
+

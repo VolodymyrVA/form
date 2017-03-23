@@ -1,37 +1,85 @@
 class Drover {
     constructor() {
-        this.wrapper = null;
-        this.form = "";
+        this.form;
+        this.divWrapper;
+        this.formButtonClose;
+        this.formButton;
+    }
+
+    createElement(element, className, attribute, value){
+        let elem = document.createElement(element);
+        if(className){
+            elem.className = className;
+        }
+        if(attribute){
+            for(let key in attribute){
+                elem.setAttribute(key, attribute[key]);
+            }
+        }
+        if(value){
+            elem.innerHTML = value;
+        }
+        return elem;
     }
 
 
-    createWrapper(classElem) {
-        let div = document.createElement('div');
-        div.className = classElem, 'hidden';
-        this.wrapper = div;
-        return this.wrapper;
+    createWrapper() {
+        this.divWrapper = this.createElement('div', 'divWrapper hidden')
     }
 
     createForm(filde) {
-        this.form = '<form class="log-form">';
-        for (let i in filde) {
-            this.form += '<input placeholder="' + i + '" type="' + filde[i].type + '" class="' + filde[i].class + '" />';
+        this.form =  this.createElement('form', 'log-form', {action: '#'} );
+        this.formButtonClose = this.createElement('div', 'form-button-close', undefined ,'&times');
+
+        this.form.appendChild(this.formButtonClose);
+
+
+        for (let key in filde) {
+            let input = this.createElement('input', 'input-form', {type: filde[key].type, placeholder: key, name: key});
+            this.form.appendChild(input);
         }
-        this.form += '<button class="form-button" type="submit" value="Submit" >login</button>' +
-                     '<p>Not registred? <a href="">Create an account</a></p>' +
-                     '</form>';
+
+        this.formButton = this.createElement('button', 'form-button-gray', {type: 'submit', value: 'submit', disabled: "disabled"}, 'login');
+        this.form.appendChild(this.formButton);
+
+        let text = this.createElement('p', undefined, undefined, 'Not registred?  '),
+            aText = this.createElement('a', undefined, undefined, 'Create an account');
+        text.appendChild(aText);
+        this.form.appendChild(text);
+        
         return this.form;
     }
 
     updateHtml(filde) {
         let body = document.body;
 
-        this.createWrapper('registration');
+        this.createWrapper();
         this.createForm(filde);
 
-        this.wrapper.innerHTML = this.form;
+        body.appendChild(this.divWrapper);
 
-        body.appendChild(this.wrapper);
+        this.divWrapper.appendChild(this.form);
+    }
+
+    show() {
+        this.divWrapper.classList.remove('hidden');
+    }
+
+    hide() {
+        this.divWrapper.classList.add('hidden');
+    }
+
+    validationButtonShow(boolean) {
+        if(boolean){
+            this.formButton.classList.remove('form-button-gray');
+            this.formButton.classList.add('form-button-green');
+            this.formButton.removeAttribute('disabled');
+        }else {
+            this.formButton.classList.remove('form-button-green');
+            this.formButton.classList.add('form-button-gray');
+            this.formButton.setAttribute('disabled', 'disabled');
+        }
+
     }
 
 }

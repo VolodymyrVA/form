@@ -63,68 +63,14 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-var _View = __webpack_require__(1);
-
-var _View2 = _interopRequireDefault(_View);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var view = new _View2.default();
-
-view.createForm();
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var View = function () {
-    function View() {
-        _classCallCheck(this, View);
-    }
-
-    _createClass(View, [{
-        key: 'createForm',
-        value: function createForm() {
-            var form = document.getElementById('form');
-            var createForm = '<form>' + '<input type="text" name="login" placeholder="login" maxlength="25" size="40" autocomplete="of"/>' + '<input type="password" name="password" placeholder="password" maxlength="25" size="40" autocomplete="of"/>' + '<button class="form-button">submit</button>' + '</form>';
-
-            form.appendChild(createForm);
-        }
-    }]);
-
-    return View;
-}();
-
-exports.default = View;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(0);
-
+eval("throw new Error(\"Module build failed: Error: Cannot find module 'babylon'\\n    at Function.Module._resolveFilename (module.js:469:15)\\n    at Function.Module._load (module.js:417:25)\\n    at Module.require (module.js:497:17)\\n    at require (internal/module.js:20:19)\\n    at Object.<anonymous> (E:\\\\development\\\\formNew\\\\node_modules\\\\babel-traverse\\\\lib\\\\path\\\\replacement.js:28:16)\\n    at Module._compile (module.js:570:32)\\n    at Object.Module._extensions..js (module.js:579:10)\\n    at Module.load (module.js:487:32)\\n    at tryModuleLoad (module.js:446:12)\\n    at Function.Module._load (module.js:438:3)\\n    at Module.require (module.js:497:17)\\n    at require (internal/module.js:20:19)\\n    at Object.<anonymous> (E:\\\\development\\\\formNew\\\\node_modules\\\\babel-traverse\\\\lib\\\\path\\\\index.js:184:43)\\n    at Module._compile (module.js:570:32)\\n    at Object.Module._extensions..js (module.js:579:10)\\n    at Module.load (module.js:487:32)\\n    at tryModuleLoad (module.js:446:12)\\n    at Function.Module._load (module.js:438:3)\\n    at Module.require (module.js:497:17)\\n    at require (internal/module.js:20:19)\\n    at Object.<anonymous> (E:\\\\development\\\\formNew\\\\node_modules\\\\babel-traverse\\\\lib\\\\index.js:10:13)\\n    at Module._compile (module.js:570:32)\\n    at Object.Module._extensions..js (module.js:579:10)\\n    at Module.load (module.js:487:32)\\n    at tryModuleLoad (module.js:446:12)\\n    at Function.Module._load (module.js:438:3)\\n    at Module.require (module.js:497:17)\\n    at require (internal/module.js:20:19)\\n    at Object.<anonymous> (E:\\\\development\\\\formNew\\\\node_modules\\\\babel-template\\\\lib\\\\index.js:69:22)\\n    at Module._compile (module.js:570:32)\");\n\n//////////////////\n// WEBPACK FOOTER\n// ./app/index.js\n// module id = 0\n// module chunks = 0\n\n//# sourceURL=webpack:///./app/index.js?");
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=bundle.js.map
